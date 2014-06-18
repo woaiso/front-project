@@ -1,0 +1,204 @@
+@charset "UTF-8";
+//编译被忽略的注释
+/***编译保留的注释**/
+/*!**压缩被保留的注释**/
+$font-color: #333;
+$background-color:#F5F5F5;
+$border-color:#EAEAEA;
+$font-family:"Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei",Helvetica, Arial, sans-serif;
+$font-size:13px;
+.center{
+  text-align: center;
+}
+html,body{
+  margin:0;
+  padding:0;
+}
+body {
+  color: $font-color;
+  background: #EAEAEA;
+  font-size:$font-size;
+  line-height: 1.5;
+}
+
+h1 {
+  color: $font-color;
+}
+.select-none{
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin border($width){
+  border:$width solid $border-color;
+}
+@mixin background($startColor,$stopColor){
+  -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorStr="'+$startColor+'",endColorStr="'+$stopColor+'",GradientType=0)';
+  background: rgba(0, 0, 0, 0.01);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,$startColor),color-stop(1,$stopColor));
+  background: -webkit-linear-gradient(top,$startColor 0,$stopColor 100%);
+  background: -moz-linear-gradient(top,$startColor 0,$stopColor 100%);
+  background: -o-linear-gradient(top,$startColor 0,$stopColor 100%);
+  background: -ms-linear-gradient(top,$startColor 0,$stopColor 100%);
+  background: linear-gradient(top,$startColor 0,$stopColor 100%);
+}
+.text-shadow{
+  text-shadow: 1px 1px #FFF, -1px -1px #333;
+}
+
+.keyboard {
+  padding: 6px 0 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-image: none;
+  @include background(#929292,#505050);
+  border-top: 1px solid #303236;
+  -webkit-box-shadow: inset 0 1px 0 #BFBFBF;
+  box-shadow: inset 0 1px 0 #BFBFBF;
+}
+.keyboard-row {
+  list-style: none;
+  padding: 0 3px;
+  margin: 0 auto;
+  text-align:center;
+}
+
+.keyboard-key {
+  color: #815d37;
+  cursor: pointer;
+  display: -moz-inline-box;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 16px;
+  line-height: 16px;
+  margin: 0 3px 6px;
+  width: 42px;
+  padding: 6px 12px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 1;
+  @extend .select-none;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  background: #EEEEF0;
+  @include background(#EEEEF0,#D3D3D9);
+  text-align: center;
+  @extend .text-shadow;
+  line-height: 30px;
+  height: 30px;
+  border: 1px solid #58575E;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.15),inset 0 1px 0 #FFF;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.15),inset 0 1px 0 #FFF;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.keyboard-key:hover,
+.keyboard-alt-key:hover {
+  color: #0e0e21;
+  z-index: 2;
+}
+.keyboard-key:active {
+  background: #E7E7EC;
+  -webkit-box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+  -moz-box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+  box-shadow: inset 0 1px #F7F7FC, 0 1px 1px #000;
+  top: 1px;
+}
+
+.keyboard-held .keyboard-alt { display: block; }
+.keyboard-alt {
+  bottom: 40px;
+  display: none;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+
+  background: #EEEEF3;
+  @include background( #F7F7FC, #E7E7EC);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px #FFF, 0 1px 2px #000;
+  -moz-box-shadow: inset 0 1px #FFF, 0 1px 2px #000;
+  box-shadow: inset 0 1px #FFF, 0 1px 2px #000;
+}
+.keyboard-alt-key {
+  color: #000;
+  cursor: pointer;
+  height: 16px;
+  line-height: 16px;
+  width: 16px;
+  padding: 12px;
+  text-shadow: 0 1px #FFF;
+}
+
+/* Special keys */
+.keyboard-key-space { width: 466px; }
+.keyboard-key-tab { padding-right: 36px; }
+.keyboard-key-capsLock { padding-right: 48px; }
+.keyboard-caps .keyboard-key-leftShift,
+.keyboard-caps .keyboard-key-rightShift,
+.keyboard-capsLocked .keyboard-key-capsLock {
+  color: #2054DA;
+  text-shadow: 0 0 12px #2054DA, 0 1px #FFF;
+}
+.keyboard-key-leftShift { padding-right: 30px; }
+.keyboard-key-rightShift { padding-left: 30px; }
+.keyboard-key-backSpace { /*padding-left: 74px;*/ }
+.keyboard-key-return {
+  -webkit-border-radius: 4px 4px 0 4px;
+  -moz-border-radius: 4px 4px 0 4px;
+  border-radius: 4px 4px 0 4px;
+  padding: 18px 12px 6px 24px;
+  background: #EEEEF3;
+  @include background(#F7F7FC, #F0F0F5);
+}
+.keyboard-key-return:after {
+  content: '';
+  display: block;
+  height: 46px;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 40px;
+  background: #EEEEF3;
+  @include background( #F0F0F5, #E7E7EC);
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 2px 2px #000;
+  -moz-box-shadow: 0 2px 2px #000;
+  box-shadow: 0 2px 2px #000;
+}
+.keyboard-key-return:active:after {
+  background: #E7E7EC;
+  -webkit-box-shadow: 0 1px 1px #000;
+  -moz-box-shadow: 0 1px 1px #000;
+  box-shadow: 0 1px 1px #000;
+}
+/*********特殊按钮的样式*******/
+.keyboard-key-numbers {
+  background: #757D8A;
+  @include background(#7f8792, #535b68);
+  color: #FFF;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+.keyboard-key-w-2{ //2个文字的按钮
+  font-size:18px;
+}

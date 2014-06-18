@@ -1,0 +1,20 @@
+/***示例页面相关***/
+@import "keyboard";
+.active-title{
+  @extend .center;
+}
+.active-content{
+  line-height: 180%;
+}
+.box {
+  background: white;
+  width: 600px;
+  margin: 30px auto;
+  padding:10px;
+  @include border-radius(5px);
+  @include border(1px);
+}
+.text-input{
+  line-height: 30px;
+  font-size: 20px;
+}
