@@ -2,20 +2,665 @@
 <html>
 <head lang="zh-CN">
     <meta charset="UTF-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
     <title>作业录入模块</title>
     <link href="css/keyboard.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/dowork.css" rel="stylesheet" type="text/css">
+    <link href="css/dowork-list.css" rel="stylesheet" type="text/css">
     <link href="css/demo.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="box">
-    <h1 class="active-title"><textarea type="text" class="text-input" cols="50" rows="8"></textarea></h1>
-    <div class="active-content">
 
+
+<div data-role="page" id="do_work_page" data-title="做作业">
+<header class="header-work">
+    <div class="header-fl-nav">
+        <div class="header-fl-nav__l" onclick="history.go(-1);">
+            <a class="nav__l-wrap">
+                <img class="img" src="images/arrow-l.png" width="20" height="20"/>
+                <span class="leftText">返回</span>
+            </a>
+        </div>
+        <div class="header-fl-nav__r" id="submit-work-btn">
+            <a class="nav__r-wrap">
+                <img class="img" src="images/correct7.png" width="20" height="20"/>
+                <span class="rightText">交作业</span>
+            </a>
+        </div>
+        <div class="header-fl-nav__center">
+            <span class="centerText">2014-05-28方正问题2作业测试</span>
+        </div>
     </div>
-</div>
+</header>
+<input type="hidden" id="hwId" value="8">
+<section class="section" id="work-warpper">
+<article class="article-work content" data-role="none" topic_id="15057" index="1"
+         topic_type="7"
+         class="content" >
+    <input type="hidden" id="topic_type" value="7"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第1题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre>按下图摆放桌子和椅子。<img alt="" style="width: 199px; height: 99px;" data-cke-saved-src="/upload/QQ截图20140528160333_1401264232604.jpg" src="/upload/QQ截图20140528160333_1401264232604.jpg">​<br>（1）摆8张餐桌可以坐多少人？<br>（2） 48人用餐，需要摆多少张桌子？<br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <span>填空1:</span>
+                <div class="subInputText">
+
+                    <textarea data-role="none" name="25325"
+                              topicDetId="25325"
+                              id="25325"
+                              value="" answer='8X2X2十4＝16X2十4＝32十4＝36' class="sub-textInput"
+                              placeholder="请输入答案"></textarea>
+
+
+                </div>
+                <span>填空2:</span>
+                <div class="subInputText">
+
+                    <textarea data-role="none" name="25326"
+                              topicDetId="25326"
+                              id="25326"
+                              value="" answer='11' class="sub-textInput"
+                              placeholder="请输入答案"></textarea>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15057"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+<article class="article-work content" data-role="none" topic_id="15056" index="2"
+         topic_type="7"
+         class="content" style="display: none">
+    <input type="hidden" id="topic_type" value="7"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第2题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre>在下面六边形的花坛周围等距离植树，留个顶点各植一棵，一共植了48棵，每边植了多少棵树？<img alt="" style="width: 114px; height: 96px;" data-cke-saved-src="/upload/QQ截图20140528160058_1401264114839.jpg" src="/upload/QQ截图20140528160058_1401264114839.jpg">​<br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <span>填空1:</span>
+                <div class="subInputText">
+
+                    <textarea data-role="none" name="25324"
+                              topicDetId="25324"
+                              id="25324"
+                              value="" answer='9' class="sub-textInput"
+                              placeholder="请输入答案"></textarea>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15056"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+<article class="article-work content" data-role="none" topic_id="15055" index="3"
+         topic_type="7"
+         class="content" style="display: none">
+    <input type="hidden" id="topic_type" value="7"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第3题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre>有58辆彩车排成一列，每辆彩车长4米，彩车之间相隔5米，这列彩车队共长多少米？（培优作业）<br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <span>填空1:</span>
+                <div class="subInputText">
+
+                    <textarea data-role="none" name="25323"
+                              topicDetId="25323"
+                              id="25323"
+                              value="" answer='517' class="sub-textInput"
+                              placeholder="请输入答案"></textarea>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15055"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+<article class="article-work content" data-role="none" topic_id="15054" index="4"
+         topic_type="7"
+         class="content" style="display: none">
+    <input type="hidden" id="topic_type" value="7"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第4题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre>一条路原有木电线杆46根，每两根之间间隔12米。现在要全部换成水泥电线杆，如果每两根水泥电线杆之间间隔20米，共需要多少根水泥电线杆？<br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <span>填空1:</span>
+                <div class="subInputText">
+
+                    <textarea data-role="none" name="25322"
+                              topicDetId="25322"
+                              id="25322"
+                              value="" answer='（46一1）X12＝45X12＝540           540÷20＝27         27十1＝28' class="sub-textInput"
+                              placeholder="请输入答案"></textarea>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15054"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+<article class="article-work content" data-role="none" topic_id="15053" index="5"
+         topic_type="7"
+         class="content" style="display: none">
+    <input type="hidden" id="topic_type" value="7"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第5题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre>同学们站成方队进行军训，只知道最外层每边站了12人，最外层一共有多少名学生？ 参加军训的一共有多少名学生？<br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <span>填空1:</span>
+                <div class="subInputText">
+
+                    <textarea data-role="none" name="25320"
+                              topicDetId="25320"
+                              id="25320"
+                              value="" answer='（12一1）X4＝11X4＝44' class="sub-textInput"
+                              placeholder="请输入答案"></textarea>
+
+
+                </div>
+                <span>填空2:</span>
+                <div class="subInputText">
+
+                    <textarea data-role="none" name="25321"
+                              topicDetId="25321"
+                              id="25321"
+                              value="" answer='144' class="sub-textInput"
+                              placeholder="请输入答案"></textarea>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15053"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+<article class="article-work content" data-role="none" topic_id="15052" index="6"
+         topic_type="7"
+         class="content" style="display: none">
+    <input type="hidden" id="topic_type" value="7"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第6题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre>同学们在操场上玩游戏，打架围成一个正方形，每个定点各站一人，每边站18个同学，一共有多少个同学在玩游戏？<br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <span>填空1:</span>
+                <div class="subInputText">
+
+                    <textarea data-role="none" name="25319"
+                              topicDetId="25319"
+                              id="25319"
+                              value="" answer='68' class="sub-textInput"
+                              placeholder="请输入答案"></textarea>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15052"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+<article class="article-work content" data-role="none" topic_id="15051" index="7"
+         topic_type="2"
+         class="content" style="display: none">
+    <input type="hidden" id="topic_type" value="2"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第7题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre>学校体育队排成一个方阵表演《中国功夫》，最外层的人数是48人，方阵外层每边有（___）人。<br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <ul class="content-listWrap">
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15051"
+                                   id="25316"
+                                   value="25316"
+                                   answer='0'>
+                        </div>
+                        <label data-role="none" for="25316">
+                            <span>11</span>
+                        </label>
+                    </li>
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15051"
+                                   id="25317"
+                                   value="25317"
+                                   answer='0'>
+                        </div>
+                        <label data-role="none" for="25317">
+                            <span>12</span>
+                        </label>
+                    </li>
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15051"
+                                   id="25318"
+                                   value="25318"
+                                   answer='1'>
+                        </div>
+                        <label data-role="none" for="25318">
+                            <span>13</span>
+                        </label>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15051"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+<article class="article-work content" data-role="none" topic_id="15050" index="8"
+         topic_type="2"
+         class="content" style="display: none">
+    <input type="hidden" id="topic_type" value="2"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第8题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre>要在一个五边形的水池边上摆花盆，使每边都有5盆，至少需要（___）盆花。<br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <ul class="content-listWrap">
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15050"
+                                   id="25313"
+                                   value="25313"
+                                   answer='0'>
+                        </div>
+                        <label data-role="none" for="25313">
+                            <span>30</span>
+                        </label>
+                    </li>
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15050"
+                                   id="25314"
+                                   value="25314"
+                                   answer='0'>
+                        </div>
+                        <label data-role="none" for="25314">
+                            <span>25</span>
+                        </label>
+                    </li>
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15050"
+                                   id="25315"
+                                   value="25315"
+                                   answer='1'>
+                        </div>
+                        <label data-role="none" for="25315">
+                            <span>20</span>
+                        </label>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15050"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+<article class="article-work content" data-role="none" topic_id="15049" index="9"
+         topic_type="2"
+         class="content" style="display: none">
+    <input type="hidden" id="topic_type" value="2"/>
+
+    <div class="article-work-list">
+        <div class="article-work-list__title-wrap">
+            <div class="fl article-work-list__title">
+                <span class="listText">第9题</span>
+            </div>
+            <div class="fr article-work-list__title-star star">
+                <img class="img" src="/images/temp.png" width="20" height="20"/>
+                <span class="star_text">收藏</span>
+            </div>
+        </div>
+        <div class="article-work-list__content">
+            <div class="work-content">
+                <div class="content-title">
+                    <p>
+                    <pre><span style="background-color:rgb(255, 255, 255)"></span>在一块长方形地的周围植树，共植树28棵，则间隔有（___）个<span style="background-color:rgb(255, 255, 255)"></span><br></pre>
+                    </p>
+                </div>
+            </div>
+            <div class="content-sub" id="topicContent">
+                <ul class="content-listWrap">
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15049"
+                                   id="25309"
+                                   value="25309"
+                                   answer='0'>
+                        </div>
+                        <label data-role="none" for="25309">
+                            <span>27</span>
+                        </label>
+                    </li>
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15049"
+                                   id="25310"
+                                   value="25310"
+                                   answer='1'>
+                        </div>
+                        <label data-role="none" for="25310">
+                            <span>28</span>
+                        </label>
+                    </li>
+                    <li class="content-list">
+                        <div class="fl radioBox">
+                            <input data-role="none" type="radio" name="15049"
+                                   id="25311"
+                                   value="25311"
+                                   answer='0'>
+                        </div>
+                        <label data-role="none" for="25311">
+                            <span>29</span>
+                        </label>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="article-work-list__footer dw-mark">
+            <div class="line-footer"></div>
+            <div class="list__footer-content">
+                <span>备注:</span>
+                <button class="canvas-btn" type="button" data-role="none">答题卡</button>
+                <input class="camera-btn" type="hidden" accept="image/*;capture=camera" data-role="none"
+                       value="拍照">
+            </div>
+            <div class="subTextArea">
+                <textarea placeholder="对老师说的话" data-role="none" cols="40" rows="8"
+                          name="mark" class="markup subButton-textarea"
+                          id="mark"
+                          topic_id="15049"></textarea>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+<footer class="footer">
+    <div class="header-fl-nav">
+        <div class="header-fl-nav__l">
+            <a class="nav__l-wrap" id="btn-prev-work">
+                <img class="img" src="images/arrow-l.png" width="20" height="20"/>
+                <span class="leftText">上一题</span>
+            </a>
+        </div>
+        <div class="header-fl-nav__r">
+            <a class="nav__r-wrap" id="btn-next-work">
+                <img class="img" src="images/arrow-r.png" width="20" height="20"/>
+                <span class="rightText">下一题</span>
+            </a>
+        </div>
+        <div class="header-fl-nav__center">
+            <span class="centerText" id="title-show-count">1/9</span>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+    var url = "/mobile/submitwork";
+    var totalCount =9;
+    var host = "/"
+</script>
+<!-- END OF: Footer -->
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.keyboard.js"></script>
 <script type="text/javascript" src="js/keyboards/qwerty.js"></script>
-<script type="text/javascript" src="js/keyboard.js"></script>
+<script type="text/javascript" src="js/keyboards/draw.js"></script>
+<script src="js/icheck.min.js"></script>
+<script src="js/jquery.autosize.min.js"></script>
+<script src="js/favorite.js"></script>
+<script src="js/dowork_new.js"></script>
+</div>
 </body>
 </html>

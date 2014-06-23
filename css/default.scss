@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*默认的主题色彩*/
+//全站主要基色
+$boady-background-color:#F5F5F5;
+
+$border-color:#D4D4D4;
+$base-color:#27D0A7;
+$second-base-color:#259;
+$third-base-color:#888;
+//默认的Banner背景颜色
+$banner-background-color:#FFFFFF;
+
+//默认的 Banner bottom -color颜色
+$banner-bottom-color:$border-color;
+
+//默认的Banner 按钮字体大小
+$banner-text-size:0.9em;
+
+
+//默认的Item背景颜色
+$article-background-color:white;
+
+//默认的Article 边框
+$article-item-border:1px solid $border-color;
+
+//优豆的颜色
+$bean-color:#FEE65F;

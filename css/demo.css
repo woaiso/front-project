@@ -13,7 +13,8 @@ body {
   color: #333333;
   background: #EAEAEA;
   font-size: 13px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Helvetica, Arial, sans-serif; }
 
 h1 {
   color: #333333; }

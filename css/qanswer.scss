@@ -1,0 +1,76 @@
+@charset "UTF-8";
+//问答模块的主要界面样式
+@import "base";
+@import "default";
+@mixin qa-padding{
+  padding:6px 8px;
+}
+.qa-title{
+    @include qa-padding;
+    font-size: .8em;
+}
+.qa-title .qa-type{
+  color:$second-base-color;
+}
+/****有优豆***/
+@mixin qa-status{
+  float: right;
+  @include border-radius(4px);
+  padding:1px;
+}
+.qa-title .qa-bean{
+  @include  qa-status;
+  border:1px solid $bean-color;
+  color: $bean-color;
+
+}
+/******已采纳******/
+.qa-title .qa-close{
+  @include  qa-status;
+  color: $base-color;
+  border:1px solid $base-color;
+}
+.qa-title .qa-teacher{
+  @include  qa-status;
+  color: $base-color;
+  border:1px solid $base-color;
+}
+.qa-title .qa-time,.qa-user .qa-user-name{
+  color:$third-base-color;
+  margin-left: 8px;
+}
+
+.qa-content{
+  @include qa-padding;
+  min-height: 68px;
+}
+.qa-content .qa-img{
+  float: left;
+  margin-right: 5px;
+  width: 64px;
+  height: 64px;
+}
+.qa-content .qa-content-str{
+  font-size: 1em;
+  color:#222;
+  line-height: 1.4em;
+}
+.qa-user{
+  font-size:.8em;
+  @include qa-padding;
+  border-top: 1px dashed #DDD;
+}
+.qa-user img,.qa-user span{
+  vertical-align: middle;
+}
+.qa-user-count{
+  background: url("../images/answer.gif") no-repeat;
+  padding-left: 19px;
+  float: right;
+  background-position-y: 3px;
+  color: $third-base-color;
+}
+.qa-user-count.has{
+  background-position-y: -15px;
+  color: #FFA500;
+}

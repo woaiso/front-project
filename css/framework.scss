@@ -1,0 +1,72 @@
+@charset "UTF-8";
+//基础框架CSS
+@import "base"; //导入基本的框架
+@import "default"; //导入默认的主题
+$font-family:"Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei",Helvetica, Arial, sans-serif;
+a{
+  text-decoration: none;
+}
+body,html{
+  margin:0;
+  padding:0;
+  background-color: $boady-background-color;
+  font-family: $font-family;
+}
+.w-header{
+  @extend .bottom-shadow;
+  height: 45px;
+  line-height: 45px;
+  background: $banner-background-color;
+  border-bottom: 1px solid $banner-bottom-color;
+}
+.w-header .header-nav{
+  width:100%;
+}
+.w-header .header-item{
+
+}
+.w-header .header-item.left{
+  position: absolute;
+  left:5px;
+  top:0px;
+}
+.w-header .header-item.right{
+  position: absolute;
+  right:5px;
+  top:0px;
+}
+.w-header .header-item.center{
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.w-header .header-item .header-item-warpper{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 7px 4px;
+}
+.w-header .header-item .header-item-warpper img{
+  vertical-align: middle;
+}
+.w-header .title-text{
+  font-weight: bold;
+  color: $base-color;
+}
+.w-header .btn-text{
+  font-size: $banner-text-size;
+  color: $base-color;
+  margin-left: -5px;
+  vertical-align: middle;
+}
+/*****主体内容****/
+.w-wapper{
+  padding:10px;
+}
+.w-article{
+  background:$article-background-color;
+  @include border-radius(4px);
+  border:$article-item-border;
+  margin-bottom: 20px;
+  @include article-shadow;
+}

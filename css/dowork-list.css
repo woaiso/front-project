@@ -1,0 +1,31 @@
+/**
+ * Created with JetBrains WebStorm.
+ * User: Hkx
+ * Date: 14-5-13
+ * Time: 上午11:28
+ */
+.article-work-list__content{}
+.article-work-list__content .content-sub{}
+.article-work-list__content .content-sub .content-listWrap{
+    border: 1px solid #D4D4D4;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+}
+.article-work-list__content .content-sub .content-listWrap .content-list{
+    line-height: 45px;
+    border-bottom: 1px solid #D4D4D4;
+}
+.article-work-list__content .content-sub .content-listWrap .content-list:after{
+    clear:both;
+    content:'.';
+    height:0;
+    visibility:hidden;
+    display:block;
+}
+.radioBox{
+    width: 40px;
+    text-align: center;
+    margin-top: -2px;
+}
